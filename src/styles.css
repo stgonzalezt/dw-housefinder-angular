@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+:root {
+  --primary-color: #00a8e1; /* Un azul similar al de Amazon Prime */
+  --secondary-color: #232f3e; /* Un azul oscuro para elementos de fondo */
+  --accent-color: #e8e7fa; /* Puedes ajustar este color según sea necesario */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra ligera para elementos */
+}
+
+button.primary {
+  padding: 10px 20px; /* Aumentar el padding para un botón más grande */
+  border: none; /* Eliminar el borde */
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px; /* Reducir el radio de borde para un estilo más cuadrado */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadir sombra para efecto */
+  transition: background-color 0.3s ease;
+}
+
+button.primary:hover {
+  background: #007bb5; /* Un tono más oscuro para el hover */
+}
+
+button.primary:active {
+  background: #005f86; /* Un tono aún más oscuro para el active */
+}
+
+button.primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 168, 225, 0.5); /* Añadir sombra de foco */
+}

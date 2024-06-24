@@ -1,0 +1,23 @@
+:host {
+  --content-padding: 20px; /* Aumentar el padding */
+  --header-height: 70px; /* Definir altura del header */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Asegurar que el color de la sombra esté definido */
+}
+
+header {
+  display: flex; /* Cambiar a flexbox para mejor control del layout */
+  align-items: center; /* Alinear verticalmente los elementos */
+  justify-content: space-between; /* Espaciar elementos en los extremos */
+  height: var(--header-height);
+  padding: 0 var(--content-padding); /* Padding solo a los lados */
+  background-color: #232f3e; /* Usar el color de fondo de Amazon Prime */
+  box-shadow: 0 2px 4px var(--shadow-color); /* Ajustar la sombra */
+  color: white; /* Texto blanco */
+}
+
+.content {
+  padding: var(--content-padding);
+  background-color: #f8f8f8; /* Usar un color de fondo claro */
+  border-radius: 8px; /* Añadir bordes redondeados */
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadir sombra para resaltar el contenido */
+}

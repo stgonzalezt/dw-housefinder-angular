@@ -1,0 +1,66 @@
+.results {
+  display: grid;
+  column-gap: 20px; /* Aumentar el espacio entre columnas */
+  row-gap: 20px; /* Aumentar el espacio entre filas */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajustar para mejor adaptabilidad */
+  margin-top: 30px; /* Reducir el margen superior */
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: solid 1px var(--secondary-color); /* Usar el color secundario para el borde */
+  padding: 10px 15px; /* Ajustar el padding */
+  border-radius: 4px; /* Reducir el radio del borde */
+  margin-right: 8px; /* Aumentar el margen derecho */
+  display: inline-block;
+  width: 50%; /* Ajustar el ancho */
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadir sombra ligera */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Añadir transición para efectos */
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color); /* Cambiar el color del borde al enfocar */
+  box-shadow: 0 2px 8px var(--shadow-color); /* Aumentar la sombra al enfocar */
+  outline: none;
+}
+
+button {
+  padding: 10px 20px; /* Ajustar el padding */
+  border: none; /* Eliminar el borde */
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px; /* Reducir el radio del borde */
+  cursor: pointer;
+  font-size: 16px; /* Ajustar el tamaño de la fuente */
+  font-weight: bold;
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadir sombra */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Añadir transición para efectos */
+}
+
+button:hover {
+  background-color: #007bb5; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+button:active {
+  background-color: #005f86; /* Cambiar el color de fondo al hacer clic */
+  box-shadow: 0 2px 2px var(--shadow-color); /* Reducir la sombra al hacer clic */
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }
+  input[type="text"] {
+      width: 100%; /* Asegurar que el campo de texto ocupa el ancho completo */
+      margin-bottom: 10px; /* Añadir margen inferior para separación */
+  }
+}

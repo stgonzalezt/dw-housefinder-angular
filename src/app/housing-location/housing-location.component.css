@@ -1,0 +1,47 @@
+.listing {
+  background: white; /* Usar un fondo blanco para un aspecto limpio */
+  border-radius: 8px; /* Reducir el radio del borde */
+  padding-bottom: 20px; /* Ajustar el padding inferior */
+  box-shadow: 0 2px 8px var(--shadow-color); /* Añadir sombra */
+  margin-bottom: 20px; /* Añadir margen inferior para separar las listas */
+}
+
+.listing-heading {
+  color: var(--secondary-color); /* Usar el color secundario para el encabezado */
+  padding: 15px 20px 0 20px; /* Ajustar el padding */
+  font-size: 18px; /* Ajustar el tamaño de la fuente */
+  font-weight: bold; /* Hacer el texto más grueso */
+}
+
+.listing-photo {
+  height: 200px; /* Ajustar la altura de la foto */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Ajustar el radio del borde */
+}
+
+.listing-location {
+  padding: 10px 20px 20px 20px; /* Mantener el padding */
+  color: #555; /* Color de texto más oscuro para mayor legibilidad */
+  font-size: 14px; /* Ajustar el tamaño de la fuente */
+}
+
+.listing-location::before {
+  content: url("/assets/location.png") / "";
+  display: inline-block;
+  margin-right: 5px; /* Añadir margen derecho para separar el icono del texto */
+  vertical-align: middle; /* Alinear verticalmente el icono con el texto */
+}
+
+section.listing a {
+  padding-left: 20px; /* Mantener el padding izquierdo */
+  text-decoration: none;
+  color: var(--primary-color); /* Usar el color primario para los enlaces */
+  font-weight: bold; /* Hacer el texto de los enlaces más grueso */
+}
+
+section.listing a::after {
+  content: "\203A";
+  margin-left: 5px; /* Mantener el margen izquierdo */
+  color: var(--primary-color); /* Asegurar que el símbolo también use el color primario */
+}

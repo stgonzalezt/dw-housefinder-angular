@@ -1,0 +1,89 @@
+.listing-photo {
+  height: 600px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 8px; /* Reducir el radio del borde */
+  float: right;
+  margin-left: 20px; /* Añadir margen izquierdo para separación */
+}
+
+.listing-heading {
+  font-size: 36pt; /* Reducir el tamaño de la fuente */
+  font-weight: bold;
+  margin-bottom: 20px; /* Aumentar el margen inferior */
+  color: var(--secondary-color); /* Usar el color secundario */
+}
+
+.listing-location::before {
+  content: url('/assets/location.png') / '';
+  display: inline-block;
+  margin-right: 10px; /* Añadir margen derecho para separar el icono del texto */
+  vertical-align: middle; /* Alinear verticalmente el icono con el texto */
+}
+
+.listing-location {
+  font-size: 12pt; /* Reducir el tamaño de la fuente */
+  margin-bottom: 20px; /* Aumentar el margen inferior */
+  color: #555; /* Usar un color más oscuro para el texto */
+}
+
+.listing-features > .section-heading {
+  color: var(--secondary-color);
+  font-size: 18pt; /* Reducir el tamaño de la fuente */
+  margin-bottom: 15px;
+}
+
+.listing-features {
+  margin-bottom: 20px;
+}
+
+.listing-features li {
+  font-size: 14pt;
+}
+
+li {
+  list-style-type: none;
+}
+
+.listing-apply .section-heading {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+
+label, input {
+  display: block;
+}
+
+label {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12pt;
+}
+
+input {
+  font-size: 16pt;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%; /* Ajustar el ancho al 100% */
+  max-width: 400px; /* Mantener un ancho máximo */
+  border: solid 1px var(--shadow-color); /* Añadir borde sólido */
+  border-radius: 4px; /* Añadir borde redondeado */
+  box-shadow: 0 2px 4px var(--shadow-color); /* Añadir sombra */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Añadir transición */
+}
+
+input:focus {
+  border-color: var(--primary-color); /* Cambiar el color del borde al enfocar */
+  box-shadow: 0 2px 8px var(--shadow-color); /* Aumentar la sombra al enfocar */
+  outline: none; /* Eliminar el borde de enfoque por defecto */
+}
+
+@media (max-width: 1024px) {
+  .listing-photo {
+    width: 100%;
+    height: 400px;
+    margin-left: 0; /* Eliminar el margen izquierdo en pantallas más pequeñas */
+  }
+}
+
